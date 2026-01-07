@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set Bodoni Moda for paragraphs and small text */
+p, span, small, .text-sm, .text-xs, .text-lg {
+  font-family: var(--font-bodoni-moda), serif;
+}
+
+/* Set UnifrakturCook for headings */
+h1, h2, h3, h4, h5, h6, .heading {
+  font-family: var(--font-unifraktur-cook), cursive;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
