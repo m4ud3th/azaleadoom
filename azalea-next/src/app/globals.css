@@ -11,9 +11,9 @@ p, span, small, .text-sm, .text-xs, .text-lg {
   font-family: var(--font-bodoni-moda), serif;
 }
 
-/* Set UnifrakturCook for headings */
+/* Set Uncial Antiqua for headings */
 h1, h2, h3, h4, h5, h6, .heading {
-  font-family: var(--font-unifraktur-cook), cursive;
+  font-family: var(--font-uncial-antiqua), cursive;
 }
 
 html,

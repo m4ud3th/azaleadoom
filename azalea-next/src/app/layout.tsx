@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, UnifrakturCook } from "next/font/google";
+import { Bodoni_Moda, Uncial_Antiqua } from "next/font/google";
 import "./globals.css";
 
 const bodoniModa = Bodoni_Moda({
@@ -7,10 +7,10 @@ const bodoniModa = Bodoni_Moda({
   variable: "--font-bodoni-moda",
 });
 
-const unifrakturCook = UnifrakturCook({
+const uncialAntiqua = Uncial_Antiqua({
   subsets: ["latin"],
-  weight: "700",
-  variable: "--font-unifraktur-cook",
+  weight: "400",
+  variable: "--font-uncial-antiqua",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bodoniModa.variable} ${unifrakturCook.variable} antialiased`}
+        className={`${bodoniModa.variable} ${uncialAntiqua.variable} antialiased`}
       >
         {children}
       </body>
