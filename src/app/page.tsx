@@ -21,19 +21,45 @@ export default function Home() {
       
       const currentSection = getCurrentSection();
       const currentIndex = sections.indexOf(currentSection);
+      const isMobile = window.innerWidth < 768;
       
-      if (e.deltaY > 0 && currentIndex < sections.length - 1) {
-        // Scrolling down
-        isScrolling = true;
-        const nextSection = sections[currentIndex + 1];
-        document.getElementById(nextSection)?.scrollIntoView({ behavior: "smooth" });
-        setTimeout(() => { isScrolling = false; }, 1000);
-      } else if (e.deltaY < 0 && currentIndex > 0) {
-        // Scrolling up
-        isScrolling = true;
-        const prevSection = sections[currentIndex - 1];
-        document.getElementById(prevSection)?.scrollIntoView({ behavior: "smooth" });
-        setTimeout(() => { isScrolling = false; }, 1000);
+      if (isMobile) {
+        // Mobile: Only navigate at section boundaries
+        const currentElement = document.getElementById(currentSection);
+        if (!currentElement) return;
+        
+        const rect = currentElement.getBoundingClientRect();
+        const atTop = rect.top >= -10;
+        const atBottom = rect.bottom <= window.innerHeight + 10;
+        
+        if (e.deltaY > 0 && currentIndex < sections.length - 1 && atBottom) {
+          e.preventDefault();
+          isScrolling = true;
+          const nextSection = sections[currentIndex + 1];
+          document.getElementById(nextSection)?.scrollIntoView({ behavior: "smooth" });
+          setTimeout(() => { isScrolling = false; }, 1000);
+        } else if (e.deltaY < 0 && currentIndex > 0 && atTop) {
+          e.preventDefault();
+          isScrolling = true;
+          const prevSection = sections[currentIndex - 1];
+          document.getElementById(prevSection)?.scrollIntoView({ behavior: "smooth" });
+          setTimeout(() => { isScrolling = false; }, 1000);
+        }
+      } else {
+        // Desktop: Simple one-scroll navigation
+        if (e.deltaY > 0 && currentIndex < sections.length - 1) {
+          e.preventDefault();
+          isScrolling = true;
+          const nextSection = sections[currentIndex + 1];
+          document.getElementById(nextSection)?.scrollIntoView({ behavior: "smooth" });
+          setTimeout(() => { isScrolling = false; }, 1000);
+        } else if (e.deltaY < 0 && currentIndex > 0) {
+          e.preventDefault();
+          isScrolling = true;
+          const prevSection = sections[currentIndex - 1];
+          document.getElementById(prevSection)?.scrollIntoView({ behavior: "smooth" });
+          setTimeout(() => { isScrolling = false; }, 1000);
+        }
       }
     };
     
@@ -65,13 +91,13 @@ export default function Home() {
       <Header />
 
       {/* Home Section */}
-      <section id="home" className="h-screen w-full bg-black flex flex-col pt-[100px]">
+      <section id="home" className="h-screen w-full bg-black flex flex-col pt-[80px] md:pt-[100px]">
         <div className="flex-1 w-full relative">
           <Image
             src="/bandfoto.png"
             alt="Azalea Band Photo"
             fill
-            className="object-cover object-bottom w-full h-full grayscale"
+            className="object-cover object-center md:object-bottom w-full h-full grayscale"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
