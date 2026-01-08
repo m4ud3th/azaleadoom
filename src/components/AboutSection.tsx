@@ -38,31 +38,39 @@ export default function AboutSection() {
           <h2 className="text-2xl md:text-6xl font-bold text-white tracking-wide" style={{ marginBottom: '1.5rem' }}>NEW RELEASES</h2>
           <div className="flex justify-center w-full" style={{ marginLeft: '1rem', marginRight: '1rem' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 max-w-xl w-full">
-            <div className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850]" style={{ backgroundColor: "#7E4AB820", borderColor: "#7E4AB830", padding: '1rem' }}>
+            <div 
+              className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer" 
+              style={{ backgroundColor: "#7E4AB820", borderColor: "#7E4AB830", padding: '1rem' }}
+              onClick={() => window.open('https://open.spotify.com/track/55wp0T63NAchDk3vtFVqWY?si=9ccdbeca9e7c49f7', '_blank')}
+            >
               <div className="aspect-square bg-gray-800 rounded-lg relative overflow-hidden" style={{ marginBottom: '0.75rem' }}>
                 <Image
                   src="/loveandpain.png"
-                  alt="Album Cover 1"
+                  alt="Love and Pain Album Cover"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <h3 className="text-white font-bold text-sm md:text-lg" style={{ marginBottom: '0.5rem' }}>Latest Album</h3>
-              <p style={{ color: "#7E4AB8", fontSize: '0.75rem' }}>2024</p>
+              <h3 className="text-white font-bold text-sm md:text-lg" style={{ marginBottom: '0.5rem' }}>Love and Pain</h3>
+              <p style={{ color: "#7E4AB8", fontSize: '0.75rem' }}>2025</p>
             </div>
-            <div className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850]" style={{ backgroundColor: "#7E4AB820", borderColor: "#7E4AB830", padding: '1rem' }}>
+            <div 
+              className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer" 
+              style={{ backgroundColor: "#7E4AB820", borderColor: "#7E4AB830", padding: '1rem' }}
+              onClick={() => window.open('https://open.spotify.com/track/6VKGiemdhBqc8Ow5jhrbOm?si=561ba92a7a04400a', '_blank')}
+            >
               <div className="aspect-square bg-gray-800 rounded-lg relative overflow-hidden" style={{ marginBottom: '0.75rem' }}>
                 <Image
                   src="/thesehollowgraves.png"
-                  alt="Album Cover 2"
+                  alt="These Hollow Graves Album Cover"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <h3 className="text-white font-bold text-sm md:text-xl" style={{ marginBottom: '1rem' }}>Previous Release</h3>
-              <p style={{ color: "#7E4AB8", fontSize: '0.75rem' }}>2023</p>
+              <h3 className="text-white font-bold text-sm md:text-xl" style={{ marginBottom: '1rem' }}>These Hollow Graves</h3>
+              <p style={{ color: "#7E4AB8", fontSize: '0.75rem' }}>2025</p>
             </div>
             </div>
           </div>
