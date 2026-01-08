@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
+// Doom/sludge metal band website
+
 export default function RootLayout({
   children,
 }: Readonly<{
