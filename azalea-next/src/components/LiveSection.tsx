@@ -1,9 +1,10 @@
 export default function LiveSection() {
   return (
-    <section id="live" className="h-screen w-full bg-black flex items-center justify-center relative">
+    <section id="live" className="h-screen w-full bg-black flex items-start justify-center relative overflow-hidden">
       <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(0,0,0,1) 0%, #7E4AB820 50%, rgba(0,0,0,1) 100%)" }} />
-      <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
-        <h2 className="text-6xl font-bold text-white mb-12 tracking-wide">LIVE SHOWS</h2>
+      <div className="relative z-10 max-w-6xl mx-auto px-8 text-center min-h-[90vh] flex flex-col justify-start space-y-20" style={{ paddingTop: '80px' }}>
+        <div className="min-h-[40vh] flex flex-col justify-center">
+          <h2 className="text-6xl font-bold text-white tracking-wide" style={{ marginBottom: '2rem' }}>LIVE SHOWS</h2>
         <div className="space-y-6">
           <div className="backdrop-blur-sm rounded-lg p-6 border" style={{ backgroundColor: "#7E4AB820", borderColor: "#7E4AB830" }}>
             <div className="flex justify-between items-center">
@@ -28,6 +29,7 @@ export default function LiveSection() {
                 <p style={{ color: "#7E4AB8" }}>9:30 PM</p>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

@@ -65,7 +65,7 @@ export default function Home() {
       <Header />
 
       {/* Home Section */}
-      <section id="home" className="h-screen w-full bg-black flex flex-col pt-[180px]">
+      <section id="home" className="h-screen w-full bg-black flex flex-col pt-[100px]">
         <div className="flex-1 w-full relative">
           <Image
             src="/bandfoto.png"

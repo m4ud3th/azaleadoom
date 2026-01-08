@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="h-screen w-full bg-black flex items-center justify-center relative overflow-hidden">
+    <section id="about" className="h-screen w-full bg-black flex items-start justify-center relative overflow-hidden">
       {/* Purple organic background shape */}
       <div className="absolute inset-0 flex items-center justify-center">
         <Image
@@ -16,7 +16,7 @@ export default function AboutSection() {
         />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-8 text-center min-h-[90vh] flex flex-col justify-start pt-16 space-y-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-8 text-center min-h-[90vh] flex flex-col justify-start space-y-20" style={{ paddingTop: '80px' }}>
         {/* About Section */}
         <div className="min-h-[40vh] flex flex-col justify-center">
           <h2 className="text-6xl font-bold text-white tracking-wide" style={{ marginBottom: '2rem' }}>ABOUT AZALEA</h2>
