@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd azalea-next && npm run build",
+  "outputDirectory": "azalea-next/.next",
+  "installCommand": "cd azalea-next && npm install"
+}
