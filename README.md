@@ -1,5 +1,7 @@
 # Azalea - Sludge Metal Band Website
 
+Built with Next.js, TypeScript, and Tailwind CSS.
+
 A modern, atmospheric website for Azalea, a sludge metal band that fuses crushing riffs with mysterious, enlightening perspectives. Built with Next.js 16 and featuring custom typography and smooth section navigation.
 
 ## Features
