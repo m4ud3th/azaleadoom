@@ -111,6 +111,8 @@ export default function Header() {
               </button>
             </nav>
           </div>
+          {/* Spacer div to add extra black space below navigation */}
+          <div className="h-1"></div>
         </div>
 
       {/* Simple toggle button */}
