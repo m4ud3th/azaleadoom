@@ -58,8 +58,7 @@ export default function Header() {
             alt="Azalea Logo"
             width={120}
             height={80}
-            className="h-[60px] w-[90px] md:h-[80px] md:w-[120px] object-cover"
-            style={{ objectPosition: "center 70%" }}
+            className="h-[60px] w-[90px] md:h-[80px] md:w-[120px] object-cover object-[center_70%]"
             priority
           />
           {/* Cart Icon - Always in header center */}
