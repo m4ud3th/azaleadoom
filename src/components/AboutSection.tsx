@@ -31,8 +31,8 @@ export default function AboutSection() {
         {/* New Releases Section */}
         <div className="min-h-[40vh] flex flex-col justify-start mb-8">
           <h2 id="new-releases" className="text-2xl md:text-6xl font-bold text-white tracking-wide mb-6 scroll-mt-[100px] md:scroll-mt-[120px]">NEW RELEASES</h2>
-          <div className="flex justify-center w-full mx-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-[180px] md:max-w-xl w-full place-items-center">
+          <div className="flex justify-center w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-[180px] md:max-w-xl w-full place-items-center mx-auto">
             <div 
               className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer bg-[#7E4AB820] border-[#7E4AB830] p-2 md:p-4 w-full" 
               onClick={() => window.open('https://open.spotify.com/track/55wp0T63NAchDk3vtFVqWY?si=9ccdbeca9e7c49f7', '_blank')}
