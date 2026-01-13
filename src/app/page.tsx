@@ -91,13 +91,14 @@ export default function Home() {
       <Header />
 
       {/* Home Section */}
-      <section id="home" className="h-screen w-full bg-black flex flex-col pt-[80px] md:pt-[100px]">
+      <section id="home" className="h-[70vh] md:h-screen w-full bg-black flex flex-col pt-[80px] md:pt-[100px]">
         <div className="flex-1 w-full relative">
           <Image
             src="/bandfoto.png"
             alt="Azalea Band Photo"
             fill
-            className="object-cover object-center md:object-bottom w-full h-full grayscale"
+            sizes="(max-width: 768px) 100vw, 100vw"
+            className="object-cover object-[45%_center] md:object-bottom w-full h-full grayscale"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />

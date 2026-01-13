@@ -91,7 +91,7 @@ export default function Header() {
                 About
               </button>
               <button 
-                onClick={() => scrollToSection("about")} 
+                onClick={() => scrollToSection("new-releases")} 
                 className="text-white text-base md:text-lg font-medium pb-1 hover:border-b-2 hover:border-azalea-purple transition-all hover:text-azalea-purple whitespace-nowrap"
               >
                 Music

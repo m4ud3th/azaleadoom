@@ -1,6 +1,6 @@
 export default function MerchSection() {
   return (
-    <section id="merch" className="min-h-screen w-full bg-black flex items-start justify-center relative overflow-hidden pt-[120px] pb-8">
+    <section id="merch" className="min-h-screen w-full bg-black flex items-start justify-center relative overflow-hidden pt-[100px] md:pt-[120px] pb-8">
       <div className="absolute inset-0 bg-[linear-gradient(315deg,#7E4AB830_0%,rgba(0,0,0,0.9)_100%)]" />
       <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 text-center min-h-[90vh] flex flex-col justify-start space-y-12 md:space-y-20">
         <div className="min-h-[40vh] flex flex-col justify-center">
