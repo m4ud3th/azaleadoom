@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="min-h-screen w-full bg-black flex items-start justify-center relative overflow-hidden py-8 md:py-0">
+    <section id="about" className="min-h-screen w-full bg-black flex items-start justify-center relative overflow-hidden pt-[120px] pb-8">
       {/* Purple organic background shape */}
       <div className="absolute inset-0 flex items-center justify-center">
         <Image
@@ -15,9 +15,9 @@ export default function AboutSection() {
         />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto text-center min-h-[90vh] flex flex-col justify-start pt-[60px] mx-6">
+      <div className="relative z-10 max-w-6xl mx-auto text-center min-h-[90vh] flex flex-col justify-start mx-6">
         {/* About Section */}
-        <div className="min-h-[40vh] flex flex-col justify-center mb-4">
+        <div className="flex flex-col justify-start mb-8">
           <h2 className="text-2xl md:text-6xl font-bold text-white tracking-wide mb-6">ABOUT AZALEA</h2>
           <p className="text-white text-xs md:text-base leading-relaxed max-w-4xl mx-auto mx-4">
             Azalea is a sludge metal band that fuses crushing, slow-burning riffs with a deeper, mysterious view of the good in 

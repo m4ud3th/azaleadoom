@@ -8,10 +8,12 @@
   --color-purple-900: #7E4AB8;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@layer base {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 /* Set Bodoni Moda for paragraphs and small text */

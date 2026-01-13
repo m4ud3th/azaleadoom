@@ -1,8 +1,8 @@
 export default function MerchSection() {
   return (
-    <section id="merch" className="min-h-screen w-full bg-black flex items-start justify-center relative overflow-hidden py-8 md:py-0">
+    <section id="merch" className="min-h-screen w-full bg-black flex items-start justify-center relative overflow-hidden pt-[120px] pb-8">
       <div className="absolute inset-0 bg-[linear-gradient(315deg,#7E4AB830_0%,rgba(0,0,0,0.9)_100%)]" />
-      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 text-center min-h-[90vh] flex flex-col justify-start space-y-12 md:space-y-20 pt-[120px]">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 text-center min-h-[90vh] flex flex-col justify-start space-y-12 md:space-y-20">
         <div className="min-h-[40vh] flex flex-col justify-center">
           <h2 className="text-3xl md:text-6xl font-bold text-white tracking-wide mb-4 md:mb-8">MERCHANDISE</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
