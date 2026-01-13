@@ -31,18 +31,18 @@ export default function AboutSection() {
         {/* New Releases Section */}
         <div className="min-h-[40vh] flex flex-col justify-start mb-8">
           <h2 id="new-releases" className="text-2xl md:text-6xl font-bold text-white tracking-wide mb-6 scroll-mt-[100px] md:scroll-mt-[120px]">NEW RELEASES</h2>
-          <div className="flex justify-center w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-[180px] md:max-w-xl w-full place-items-center mx-auto">
+          <div className="w-full px-4 md:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
             <div 
               className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer bg-[#7E4AB820] border-[#7E4AB830] p-2 md:p-4 w-full" 
               onClick={() => window.open('https://open.spotify.com/track/55wp0T63NAchDk3vtFVqWY?si=9ccdbeca9e7c49f7', '_blank')}
             >
-              <div className="relative overflow-hidden aspect-square bg-gray-800 rounded-lg mb-2 md:mb-3 max-w-[160px] w-full mx-auto md:max-w-none">
+              <div className="relative overflow-hidden aspect-square bg-gray-800 rounded-lg mb-2 md:mb-3 w-full">
                 <Image
                   src="/loveandpain.png"
                   alt="Love and Pain Album Cover"
                   fill
-                  sizes="(max-width: 768px) 160px, 50vw"
+                  sizes="(max-width: 768px) 90vw, 50vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
@@ -53,12 +53,12 @@ export default function AboutSection() {
               className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer bg-[#7E4AB820] border-[#7E4AB830] p-2 md:p-4 w-full" 
               onClick={() => window.open('https://open.spotify.com/track/6VKGiemdhBqc8Ow5jhrbOm?si=561ba92a7a04400a', '_blank')}
             >
-              <div className="relative overflow-hidden aspect-square bg-gray-800 rounded-lg mb-2 md:mb-3 max-w-[160px] w-full mx-auto md:max-w-none">
+              <div className="relative overflow-hidden aspect-square bg-gray-800 rounded-lg mb-2 md:mb-3 w-full">
                 <Image
                   src="/thesehollowgraves.png"
                   alt="These Hollow Graves Album Cover"
                   fill
-                  sizes="(max-width: 768px) 160px, 50vw"
+                  sizes="(max-width: 768px) 90vw, 50vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
