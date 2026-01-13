@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import AboutSection from "@/components/AboutSection";
 import LiveSection from "@/components/LiveSection";
 import MerchSection from "@/components/MerchSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -108,6 +109,7 @@ export default function Home() {
       <AboutSection />
       <LiveSection />
       <MerchSection />
+      <Footer />
     </div>
   );
 }

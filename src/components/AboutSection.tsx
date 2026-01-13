@@ -56,7 +56,7 @@ export default function AboutSection() {
       
       <div className="relative z-10 max-w-6xl mx-auto text-center min-h-[90vh] flex flex-col justify-start mx-4 md:mx-6">
         {/* About Section */}
-        <div className="flex flex-col justify-start mb-8">
+        <div id="about-top" className="flex flex-col justify-start mb-8">
           <h2 className="text-2xl md:text-6xl font-bold text-white tracking-wide mb-6">ABOUT AZALEA</h2>
           <p className="text-white text-xs md:text-base leading-relaxed max-w-[22rem] md:max-w-4xl mx-auto px-4 md:px-0">
             Azalea is a sludge metal band that fuses crushing, slow-burning riffs with a deeper, mysterious view of the good in 
@@ -68,7 +68,11 @@ export default function AboutSection() {
         </div>
 
         {/* New Releases Section */}
-        <div className="min-h-[40vh] flex flex-col justify-start mb-8">
+        <div
+          id="new-releases-section"
+          data-active-release={activeIndex !== null ? "true" : "false"}
+          className="min-h-[40vh] flex flex-col justify-start mb-8"
+        >
           <h2 id="new-releases" className="text-2xl md:text-6xl font-bold text-white tracking-wide mb-6 scroll-mt-[100px] md:scroll-mt-[120px]">NEW RELEASES</h2>
           <div className="w-full px-4 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
