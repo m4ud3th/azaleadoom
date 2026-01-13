@@ -1,6 +1,45 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function AboutSection() {
+  const cardRef1 = useRef<HTMLDivElement | null>(null);
+  const cardRef2 = useRef<HTMLDivElement | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const updateActive = () => {
+      const isMobile = window.innerWidth < 768;
+      if (!isMobile) {
+        setActiveIndex(null);
+        return;
+      }
+      const centerY = window.innerHeight / 2;
+      const dist = (el: HTMLDivElement | null) => {
+        if (!el) return Number.POSITIVE_INFINITY;
+        const rect = el.getBoundingClientRect();
+        const mid = rect.top + rect.height / 2;
+        return Math.abs(mid - centerY);
+      };
+      const d1 = dist(cardRef1.current);
+      const d2 = dist(cardRef2.current);
+      const min = Math.min(d1, d2);
+      const threshold = Math.min(window.innerHeight, 600) * 0.15; // ~15% of viewport height
+      if (min === Number.POSITIVE_INFINITY || min > threshold) {
+        setActiveIndex(null);
+      } else {
+        setActiveIndex(d1 <= d2 ? 0 : 1);
+      }
+    };
+
+    updateActive();
+    window.addEventListener("scroll", updateActive, { passive: true });
+    window.addEventListener("resize", updateActive);
+    return () => {
+      window.removeEventListener("scroll", updateActive);
+      window.removeEventListener("resize", updateActive);
+    };
+  }, []);
   return (
     <section id="about" className="min-h-screen w-full bg-black flex items-start justify-center relative overflow-hidden pt-[100px] md:pt-[120px] pb-8">
       {/* Purple organic background shape */}
@@ -34,6 +73,7 @@ export default function AboutSection() {
           <div className="w-full px-4 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
             <div 
+              ref={cardRef1}
               className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer bg-[#7E4AB820] border-[#7E4AB830] p-2 md:p-4 w-full" 
               onClick={() => window.open('https://open.spotify.com/track/55wp0T63NAchDk3vtFVqWY?si=9ccdbeca9e7c49f7', '_blank')}
             >
@@ -43,13 +83,14 @@ export default function AboutSection() {
                   alt="Love and Pain Album Cover"
                   fill
                   sizes="(max-width: 768px) 90vw, 50vw"
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className={`object-cover transition-all duration-500 ${activeIndex === 0 ? "grayscale-0" : "grayscale"} md:grayscale md:hover:grayscale-0`}
                 />
               </div>
               <h3 className="text-white font-bold text-sm md:text-lg mb-2">Love and Pain</h3>
               <p className="text-azalea-purple text-xs">2025</p>
             </div>
             <div 
+              ref={cardRef2}
               className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer bg-[#7E4AB820] border-[#7E4AB830] p-2 md:p-4 w-full" 
               onClick={() => window.open('https://open.spotify.com/track/6VKGiemdhBqc8Ow5jhrbOm?si=561ba92a7a04400a', '_blank')}
             >
@@ -59,7 +100,7 @@ export default function AboutSection() {
                   alt="These Hollow Graves Album Cover"
                   fill
                   sizes="(max-width: 768px) 90vw, 50vw"
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className={`object-cover transition-all duration-500 ${activeIndex === 1 ? "grayscale-0" : "grayscale"} md:grayscale md:hover:grayscale-0`}
                 />
               </div>
               <h3 className="text-white font-bold text-sm md:text-xl mb-4">These Hollow Graves</h3>
