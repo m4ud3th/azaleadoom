@@ -177,7 +177,7 @@ export default function Header() {
       <div className={`fixed top-[80px] md:top-[100px] left-0 right-0 z-40 w-full bg-black/95 backdrop-blur-sm transition-all duration-500 ease-in-out transform ${
         isNavVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
       }`}>
-          <div className="flex items-center justify-center py-4 md:py-6 px-4">
+          <div className="flex items-center justify-center py-2 md:py-2 px-4">
             <nav className="flex gap-6 md:gap-8 text-center">
               <button 
                 onClick={() => scrollToSection("home")} 

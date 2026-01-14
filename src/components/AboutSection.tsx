@@ -78,7 +78,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
             <div 
               ref={cardRef1}
-              className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer bg-[#7E4AB820] border-[#7E4AB830] p-2 md:p-4 w-full" 
+              className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer bg-[#7E4AB820] border-[#7E4AB830] p-2 md:p-4 w-full md:max-w-xs md:mx-auto" 
               onClick={() => window.open('https://open.spotify.com/track/55wp0T63NAchDk3vtFVqWY?si=9ccdbeca9e7c49f7', '_blank')}
             >
               <div className="relative overflow-hidden aspect-square bg-gray-800 rounded-lg mb-2 md:mb-3 w-full">
@@ -95,7 +95,7 @@ export default function AboutSection() {
             </div>
             <div 
               ref={cardRef2}
-              className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer bg-[#7E4AB820] border-[#7E4AB830] p-2 md:p-4 w-full" 
+              className="backdrop-blur-sm rounded-lg border transition-all hover:border-[#7E4AB850] cursor-pointer bg-[#7E4AB820] border-[#7E4AB830] p-2 md:p-4 w-full md:max-w-xs md:mx-auto" 
               onClick={() => window.open('https://open.spotify.com/track/6VKGiemdhBqc8Ow5jhrbOm?si=561ba92a7a04400a', '_blank')}
             >
               <div className="relative overflow-hidden aspect-square bg-gray-800 rounded-lg mb-2 md:mb-3 w-full">
