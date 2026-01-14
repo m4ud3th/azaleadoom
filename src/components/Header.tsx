@@ -82,11 +82,27 @@ export default function Header() {
       }
 
       // Unified behavior (desktop + mobile):
-      // - About underlines only when About content is in view
-      // - Music underlines in the New Releases area (desktop handled here; mobile handled above)
+      // - About underlines when About content or New Releases are in view on desktop
+      // - Music underlines in the New Releases area on mobile only
       
-      // Desktop: treat New Releases as Music
+      // Desktop: treat both About content and New Releases as About
       if (!isMobile) {
+        if (inCenter("about-top") || inCenter("about") || inCenter("new-releases-section") || inCenter("new-releases")) return "about";
+        const aboutSection = document.getElementById("about");
+        const newReleasesSection = document.getElementById("new-releases-section");
+        
+        // Check if about section or new releases section is in viewport
+        if (aboutSection) {
+          const rect = aboutSection.getBoundingClientRect();
+          if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.2) return "about";
+        }
+        
+        if (newReleasesSection) {
+          const rect = newReleasesSection.getBoundingClientRect();
+          if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.2) return "about";
+        }
+      } else {
+        // Mobile: keep existing logic where New Releases shows as Music
         if (inCenter("new-releases-section") || inCenter("new-releases")) return "music";
         const h2 = document.getElementById("new-releases");
         if (h2) {
@@ -95,7 +111,7 @@ export default function Header() {
         }
       }
 
-      // About only when About content is centered
+      // About content detection for both desktop and mobile
       if (inCenter("about-top") || inCenter("about")) return "about";
 
       if (inCenter("live")) return "live";
