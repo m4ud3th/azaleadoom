@@ -51,6 +51,7 @@ body {
   position: relative;
   color: white;
   z-index: 2;
+  font-family: var(--font-uncial-antiqua), cursive;
 }
 
 .azalea-glow::before {
@@ -60,6 +61,7 @@ body {
   left: 0;
   z-index: -1;
   color: transparent;
+  font-family: var(--font-uncial-antiqua), cursive;
   text-shadow: 0 0 10px rgba(126, 74, 184, 1), 
                0 0 20px rgba(126, 74, 184, 0.8),
                0 0 30px rgba(126, 74, 184, 0.6),
