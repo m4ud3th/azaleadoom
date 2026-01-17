@@ -57,7 +57,9 @@ export default function AboutSection() {
       <div className="relative z-10 max-w-6xl mx-auto text-center min-h-[90vh] flex flex-col justify-start mx-4 md:mx-6">
         {/* About Section */}
         <div id="about-top" className="flex flex-col justify-start mb-8">
-          <h2 className="text-2xl md:text-6xl font-bold text-white tracking-wide mb-6">ABOUT AZALEA</h2>
+          <h2 className="text-2xl md:text-6xl font-bold text-white tracking-wide mb-6">
+            ABOUT <span className="azalea-glow" data-text="AZALEA">AZALEA</span>
+          </h2>
           <p className="text-white text-xs md:text-base leading-relaxed max-w-[22rem] md:max-w-4xl mx-auto px-4 md:px-0">
             Azalea is a sludge metal band that fuses crushing, slow-burning riffs with a deeper, mysterious view of the good in 
             the world. Their lyrics take you to another dimension, where light and darkness converge and the familiar takes 

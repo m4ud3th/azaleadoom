@@ -45,3 +45,24 @@ body {
 .pulse-animation {
   animation: pulse 2s infinite;
 }
+
+/* Glowing Azalea text effect */
+.azalea-glow {
+  position: relative;
+  color: white;
+  z-index: 2;
+}
+
+.azalea-glow::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(126, 74, 184, 1), 
+               0 0 20px rgba(126, 74, 184, 0.8),
+               0 0 30px rgba(126, 74, 184, 0.6),
+               0 0 40px rgba(126, 74, 184, 0.4),
+               0 0 50px rgba(126, 74, 184, 0.3);
+}
